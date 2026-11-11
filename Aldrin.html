@@ -1,0 +1,526 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aldrin S. Balinioco | Portfolio</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #f4f6fa;
+            color: #333;
+            padding-top: 75px;
+        }
+
+        /* NAVIGATION */
+
+        header {
+            background-color: #101d35;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .logo {
+            color: #d6ad60;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #d6ad60;
+        }
+
+        /* HOME SECTION */
+
+        .home {
+            min-height: 85vh;
+            background: linear-gradient(120deg, #101d35, #294365);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 60px 10%;
+            gap: 40px;
+            scroll-margin-top: 75px;
+        }
+
+        .home-text {
+            max-width: 550px;
+        }
+
+        .home-text h3 {
+            color: #d6ad60;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .home-text h1 {
+            font-size: 43px;
+            margin-bottom: 15px;
+        }
+
+        .home-text h2 {
+            font-size: 23px;
+            color: #d6ad60;
+            margin-bottom: 20px;
+        }
+
+        .home-text p {
+            line-height: 1.8;
+            color: #dce3ef;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            background-color: #d6ad60;
+            color: #101d35;
+            padding: 13px 28px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background-color: white;
+        }
+
+        /* PROFILE PICTURE */
+
+        .profile {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #d6ad60;
+        }
+
+        /* GENERAL SECTIONS */
+
+        section:not(.home) {
+            padding: 70px 10%;
+            scroll-margin-top: 75px;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 30px;
+            color: #101d35;
+            margin-bottom: 35px;
+        }
+
+        .title span {
+            color: #c09243;
+        }
+
+        /* ABOUT SECTION */
+
+        .about {
+            background-color: white;
+            text-align: center;
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.9;
+            color: #555;
+            font-size: 16px;
+        }
+
+        .info-box {
+            background-color: #f4f6fa;
+            max-width: 750px;
+            margin: 30px auto 0;
+            padding: 25px;
+            border-left: 5px solid #d6ad60;
+            text-align: left;
+            line-height: 2.2;
+        }
+
+        /* EDUCATION SECTION */
+
+        .education {
+            background-color: #e9edf4;
+        }
+
+        .education-box {
+            background-color: white;
+            padding: 30px;
+            max-width: 650px;
+            margin: auto;
+            text-align: center;
+            border-radius: 8px;
+            border-bottom: 4px solid #d6ad60;
+        }
+
+        .education-box h3 {
+            color: #101d35;
+            margin-bottom: 15px;
+        }
+
+        .education-box p {
+            color: #555;
+            line-height: 1.8;
+        }
+
+        /* SKILLS SECTION */
+
+        .skills {
+            background-color: white;
+        }
+
+        .skill-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .skill-box {
+            background-color: #f4f6fa;
+            padding: 30px;
+            text-align: center;
+            border-radius: 8px;
+            border-bottom: 3px solid #d6ad60;
+            transition: 0.3s;
+        }
+
+        .skill-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px #00000015;
+        }
+
+        .skill-box h3 {
+            color: #101d35;
+            margin-bottom: 10px;
+        }
+
+        .skill-box p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* CONTACT SECTION */
+
+        .contact {
+            background-color: #e9edf4;
+            text-align: center;
+        }
+
+        .contact-box {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: auto;
+            line-height: 2.5;
+        }
+
+        .contact-box a {
+            color: #a77a2e;
+            text-decoration: none;
+        }
+
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background-color: #101d35;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        footer span {
+            color: #d6ad60;
+        }
+
+        /* RESPONSIVE DESIGN */
+
+        @media (max-width: 768px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px 5%;
+            }
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+
+            nav a {
+                margin: 0;
+                font-size: 13px;
+            }
+
+            body {
+                padding-top: 100px;
+            }
+
+            .home {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .home-text h1 {
+                font-size: 33px;
+            }
+
+            .profile {
+                width: 210px;
+                height: 210px;
+            }
+
+            .skill-container {
+                grid-template-columns: 1fr;
+            }
+
+            section:not(.home),
+            .home {
+                scroll-margin-top: 110px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+
+    <header>
+
+        <div class="logo">ALDRIN.</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- HOME SECTION -->
+
+    <section class="home" id="home">
+
+        <div class="home-text">
+
+            <h3>Hello, Welcome!</h3>
+
+            <h1>I'm Aldrin S. Balinioco</h1>
+
+            <h2>BSIT 3rd Year Student</h2>
+
+            <p>
+                Welcome to my personal portfolio! I am a third-year
+                Information Technology student from Inalad, Siaton,
+                Negros Oriental. I am interested in technology,
+                programming, and editing. I enjoy learning new skills
+                and improving my knowledge in the field of IT.
+            </p>
+
+            <a href="#about" class="btn">Discover More</a>
+
+        </div>
+
+        <!-- PROFILE PICTURE -->
+
+        <img src="aldrin.jpg"
+             alt="Aldrin S. Balinioco"
+             class="profile">
+
+    </section>
+
+
+    <!-- ABOUT SECTION -->
+
+    <section class="about" id="about">
+
+        <h2 class="title">About <span>Me</span></h2>
+
+        <p>
+            My name is Aldrin S. Balinioco. I am currently a
+            third-year Bachelor of Science in Information Technology
+            student at Negros Oriental State University - Siaton
+            Campus. I am from Inalad, Siaton, Negros Oriental.
+            I have an interest in computers, programming, and
+            graphic editing. I always try to improve my abilities
+            and learn more about modern technology.
+        </p>
+
+        <div class="info-box">
+
+            <p><strong>Name:</strong> Aldrin S. Balinioco</p>
+
+            <p><strong>Course:</strong> BS Information Technology</p>
+
+            <p><strong>Year Level:</strong> 3rd Year College</p>
+
+            <p><strong>Address:</strong> Inalad, Siaton, Negros Oriental</p>
+
+            <p><strong>School:</strong> NORSU - Siaton Campus</p>
+
+        </div>
+
+    </section>
+
+
+    <!-- EDUCATION SECTION -->
+
+    <section class="education" id="education">
+
+        <h2 class="title">My <span>Education</span></h2>
+
+        <div class="education-box">
+
+            <h3>Negros Oriental State University</h3>
+
+            <p>Bachelor of Science in Information Technology</p>
+
+            <p>3rd Year College</p>
+
+            <p>Siaton Campus</p>
+
+        </div>
+
+    </section>
+
+
+    <!-- SKILLS SECTION -->
+
+    <section class="skills" id="skills">
+
+        <h2 class="title">My <span>Skills</span></h2>
+
+        <div class="skill-container">
+
+            <div class="skill-box">
+
+                <h3>Microsoft Office</h3>
+
+                <p>
+                    Knowledge in using Microsoft Word,
+                    Excel, and PowerPoint.
+                </p>
+
+            </div>
+
+            <div class="skill-box">
+
+                <h3>Editing</h3>
+
+                <p>
+                    Basic skills in editing pictures,
+                    designs, and other creative content.
+                </p>
+
+            </div>
+
+            <div class="skill-box">
+
+                <h3>Java Programming</h3>
+
+                <p>
+                    Basic knowledge of Java coding,
+                    programming, and problem-solving.
+                </p>
+
+            </div>
+
+            <div class="skill-box">
+
+                <h3>HTML</h3>
+
+                <p>
+                    Creating and designing basic
+                    websites using HTML.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT SECTION -->
+
+    <section class="contact" id="contact">
+
+        <h2 class="title">Contact <span>Me</span></h2>
+
+        <div class="contact-box">
+
+            <p>
+                <strong>Email:</strong>
+
+                <a href="mailto:baliniocoaldrin@gmail.com">
+                    baliniocoaldrin@gmail.com
+                </a>
+            </p>
+
+            <p>
+                <strong>Location:</strong>
+                Inalad, Siaton, Negros Oriental
+            </p>
+
+            <p>
+                <strong>School:</strong>
+                NORSU - Siaton Campus
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 <span>Aldrin S. Balinioco</span>.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+</html>
